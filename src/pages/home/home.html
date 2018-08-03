@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>
+      Count: {{count}}
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="refresh()">
+        <ion-icon name="refresh"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h1>T = {{ballwidthNumber}}</h1>
+        <h1>{{message}}</h1>        
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-badge color={{color}}>{{golpe}}</ion-badge>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!-- <div full><h1>X: {{x}}</h1></div>
+  <div full><h1>Y: {{y}}</h1></div>
+  <div full><h1>TimeStamp: {{timeStamp}}</h1></div>
+  <div full><h1>Z: {{z}}</h1></div>
+-->
+
+<!-- <button ion-button full color="dark" (click)="start()">Start Listening</button> -->
+  <!-- <button ion-button full (click)="stop()">Stop Listening</button> -->
+  <div class="ball" [style.width.px]="ballwidthNumber" [style.height.px]="ballwidthNumber" ></div>
+</ion-content>
